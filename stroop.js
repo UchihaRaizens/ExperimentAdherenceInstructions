@@ -3,6 +3,7 @@ var dataTask1 = ["Červená",
 				"Yellow",
 				"Zelená",
 				"Modrá"];
+				
 var dataTaskColor = [
 	"blue",
 	"green",
