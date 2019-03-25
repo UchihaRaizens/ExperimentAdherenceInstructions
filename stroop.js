@@ -12,7 +12,7 @@ var dataTaskColor = [
 	"orange"
 ];
 
-var endData = "Stlacte klavesu F12";
+var endData = "Stlačte klávesu F12";
 
 var MAX = 4;
 var index = 0;
@@ -27,6 +27,7 @@ function load() {
 function answerTask() {
 	var result = document.getElementById('stroop-result').value;
 	console.log("Odpoved: " + result);
+	evaluate(result);
 	nextMathExample();
 }
 
@@ -36,6 +37,10 @@ function nextMathExample() {
 	} else {
 		end();
 	}
+
+}
+
+function evaluate(result) {
 
 }
 

@@ -7,7 +7,7 @@ var dataTask1 = [
 ];
 
 
-var endData = "Stlacte klavesu F12";
+var endData = "Stlačte klávesu F12";
 
 var MAX = 4;
 var index = 0;

@@ -2,7 +2,7 @@ var dataTask1 = ["1 + 2 + 3 + 4 = ?",
 				"2 - 3  = ?",
 				"3 * 6 = ? "];
 
-var endData = "Stlacte klavesu F12";
+var endData = "Stlačte klávesu F12";
 
 var MAX = 2;
 var index = 0;

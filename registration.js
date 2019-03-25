@@ -1,5 +1,5 @@
 
-var endData = "Stlacte klavesu F12";
+var endData = "Stlačte klávesu F12";
 
 
 function load() {

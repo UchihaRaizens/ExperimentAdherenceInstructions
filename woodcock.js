@@ -4,7 +4,7 @@ var dataTask1 = [
 	"1 3 7 9 11 58 ?"
 ];
 
-var endData = "Stlacte klavesu F12";
+var endData = "Stlačte klávesu F12";
 
 var MAX = 2;
 var index = 0; 
