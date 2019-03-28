@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation sequence screen no.1</title>
+
+</head>
+<style>
+
+#circle1{
+	-webkit-animation-name: circleOne; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 64s; /* Safari 4.0 - 8.0 */
+	/*animation-name: circleOne;*/
+	animation-duration: 64s; /* 8 x 3 sec + 8 x 5 sec*/
+	animation-delay: 5s;
+	display: inline-block;
+}
+
+@-webkit-keyframes circleOne {
+  0%   {left: 16%; top: 10%;}
+  3% {left: 68%; top: 3%;} /* prechod */
+
+  10% {left: 68%; top: 3%;} /* 2. kalib. bod */
+  13% {left: 94%; top: 13%;}
+
+  20% {left: 94%; top: 13%;} /* 3. kalib. bod */
+  23% {left: 33%; top: 45%;}
+  
+  30% {left: 33%; top: 45%;} /* 4. kalib. bod */
+  33% {left: 50%; top: 35%;}
+
+  40% {left: 50%; top: 35%;} /* 5. kalib. bod */
+  43% {left: 73%; top: 55%;}
+
+  50% {left: 73%; top: 55%;} /* 6. kalib. bod */
+  53% {left: 2%; top: 93%;}
+
+  60% {left: 2%; top: 93%;} /* 7. kalib. bod */
+  63% {left: 28%; top: 75%}
+
+  70% {left: 28%; top: 75%} /* 8. kalib. bod */
+  73% {left: 70%; top: 95%;}
+
+  100% {left: 70%; top: 95%;} /* 9. kalib. bod */
+}
+
+@keyframes circleOne {
+  0%   {left: 16%; top: 10%;}
+  3% {left: 68%; top: 3%;} /* prechod */
+
+  10% {left: 68%; top: 3%;} /* 2. kalib. bod */
+  13% {left: 94%; top: 13%;}
+
+  20% {left: 94%; top: 13%;} /* 3. kalib. bod */
+  23% {left: 33%; top: 45%;}
+  
+  30% {left: 33%; top: 45%;} /* 4. kalib. bod */
+  33% {left: 50%; top: 35%;}
+
+  40% {left: 50%; top: 35%;} /* 5. kalib. bod */
+  43% {left: 73%; top: 55%;}
+
+  50% {left: 73%; top: 55%;} /* 6. kalib. bod */
+  53% {left: 2%; top: 93%;}
+
+  60% {left: 2%; top: 93%;} /* 7. kalib. bod */
+  63% {left: 28%; top: 75%}
+
+  70% {left: 28%; top: 75%} /* 8. kalib. bod */
+  73% {left: 70%; top: 95%;}
+
+  100% {left: 70%; top: 95%;} /* 9. kalib. bod */
+}
+
+.circle-one {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: yellow;
+}
+
+span{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background: white;
+	z-index: 99;
+	text-align: center;
+	line-height: 25px;
+	top: 2px;
+	left: 2px;
+}
+
+</style>
+
+<body>
+
+	<!-- ***************** 1. validation sequence ***************** -->
+
+	<a id="circle1" style="left: 16%; top: 10%;" class="circle-one"><span>+</span></a>
+
+</body>
+</html>

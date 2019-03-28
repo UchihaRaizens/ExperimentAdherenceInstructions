@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation sequence screen</title>
+
+</head>
+<style>
+#circle {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: red;
+
+	-webkit-transition: left 2s; /* Safari */
+	transition: left 2s;
+	-webkit-transition-duration: 5s; /* Safari */
+  	-webkit-transition-delay: 2s; /* Safari */
+  	/*transition-property: width;*/
+  	transition-duration: 5s;
+  	transition-delay: 2s;
+    }
+
+/*#circle:hover {
+  left: 50%;
+}*/
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.circle {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: red;
+	display: none;
+	/*-webkit-transition: left 2s;
+	transition: left 2s;*/
+}
+
+#circle1{
+	-webkit-animation-name: circleC; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 64s; /* Safari 4.0 - 8.0 */
+	animation-name: circleC;
+	animation-duration: 64s; /* 8 x 3 sec + 8 x 5 sec*/
+	/*animation-delay: 5s;*/
+	display: inline-block;
+}
+
+@-webkit-keyframes circleC {
+  0%   {left: 10%; top: 10%;}
+  4.7% {left: 50%; top: 10%;} /* prechod */
+  12.5% {left: 50%; top: 10%;} /* 2. kalib. bod */
+  17.2% {left: 90%; top: 10%;}
+  25% {left: 10%; top: 30%;} /* 2. kalib. bod */
+  29.7% {left: 90%; top: 10%;}
+}
+
+@keyframes circleC {
+  0%   {left: 10%; top: 10%;}
+  3% {left: 50%; top: 10%;} /* prechod */
+
+  10% {left: 50%; top: 10%;} /* 2. kalib. bod */
+  13% {left: 85%; top: 10%;}
+
+  20% {left: 85%; top: 10%;} /* 3. kalib. bod */
+  23% {left: 10%; top: 45%;}
+  
+  30% {left: 10%; top: 45%;} /* 4. kalib. bod */
+  33% {left: 50%; top: 45%;}
+
+  40% {left: 50%; top: 45%;} /* 5. kalib. bod */
+  43% {left: 85%; top: 45%;}
+
+  50% {left: 85%; top: 45%;} /* 6. kalib. bod */
+  53% {left: 10%; top: 85%;}
+
+  60% {left: 10%; top: 85%;}
+  63% {left: 50%; top: 85%;}
+
+  70% {left: 50%; top: 85%;}
+  73% {left: 85%; top: 85%;}
+
+  80% {left: 85%; top: 85%;}
+}
+
+/*#circle4{
+	-webkit-animation-name: circleTwo;
+	-webkit-animation-duration: 3s;
+	animation-name: circleTwo;
+	animation-duration: 3s;
+	animation-delay: 8s;
+}
+
+@-webkit-keyframes circleTwo {
+  0%   {display: block; left: 50%; top: 10%;}
+  99% {right: 10%; top: 10%;}
+  100% {display: none;}
+}
+
+@keyframes circleTwo {
+	0%   {display: block; left: 50%; top: 10%;}
+  	99% {right: 10%; top: 10%;}
+  	100% {display: none;}
+}*/
+
+
+
+.circle-two {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: darkblue;
+}
+
+.circle-three {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: green;
+}
+
+#circle-yellow {
+	left: 50%;
+	position: absolute;
+	top: 10%;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: yellow;
+	-webkit-transition: left 2s; /* Safari */
+	transition: left 2s;
+    }
+
+#circle-yellow:hover {
+  left: 50%;
+}
+
+#circle-green {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: green;
+	-webkit-transition: left 2s, bottom 2s, -webkit-transform 2s; /* Safari */
+  	transition: left 2s, bottom 2s, transform 2s;
+    }
+
+#circle-green:hover {
+  right: 20%;
+  bottom: 40%;
+}
+
+.circle-one {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: yellow;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+span{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background: white;
+	z-index: 99;
+	text-align: center;
+	line-height: 25px;
+	top: 2px;
+	left: 2px;
+}
+
+</style>
+
+<body class="preload">
+
+	<!-- ***************** 2. validation sequence ***************** -->
+	<a id="circle1" style="left: 10%; top: 10%;" class="circle"><span>+</span></a>
+	<!--<a id="circle2" style="left: 10%; top: 0; bottom: 0; margin: auto;" class="circle"></a>
+	<a id="circle3" style="left: 10%; bottom: 10%;" class="circle"></a>
+	<! <a id="circle-yellow"></a> -->
+
+	<!-- <a id="circle4" style="left: 0; right: 0; margin: auto; top: 10%;" class="circle"></a>
+	<a id="circle5" style="left: 0; right: 0; top: 0; bottom: 0; margin: auto;" class="circle"></a>
+	<a id="circle6" style="left: 0; right: 0; margin: auto; bottom: 10%;" class="circle"></a>
+
+	<a id="circle7" style="right: 10%; top: 10%;" class="circle"></a>
+	<a id="circle8" style="right: 10%; top: 0; bottom: 0; margin: auto;" class="circle"></a>
+	<a id="circle-green" style="right: 10%; bottom: 10%;" class="circle"></a> -->
+
+	<!-- ***************** 1. validation sequence ***************** -->
+
+	<!-- <a id="circle1" style="left: 16%; top: 10%;" class="circle-one"></a>
+	<a id="circle12" style="left: 33%; top: 45%;" class="circle-one"></a>
+	<a id="circle13" style="left: 2%; top: 93%;" class="circle-one"></a>
+
+	<a id="circle14" style="left: 68%; top: 3%;" class="circle-one"></a>
+	<a id="circle15" style="left: 50%; top: 35%;" class="circle-one"></a>
+	<a id="circle16" style="left: 28%; top: 75%;" class="circle-one"></a>
+
+	<a id="circle17" style="left: 94%; top: 13%;" class="circle-one"></a>
+	<a id="circle18" style="left: 73%; top: 55%;" class="circle-one"></a>
+	<a id="circle19" style="left: 70%; top: 95%;" class="circle-one"></a> -->
+
+
+	<!-- ***************** 2. validation sequence ***************** -->
+
+	<!-- <a id="circle11" style="left: 5%; top: 25%;" class="circle-two"></a>
+	<a id="circle12" style="left: 13%; top: 65%;" class="circle-two"></a>
+	<a id="circle13" style="left: 20%; top: 92%;" class="circle-two"></a>
+
+	<a id="circle14" style="left: 45%; top: 5%;" class="circle-two"></a>
+	<a id="circle15" style="left: 35%; top: 35%;" class="circle-two"></a>
+	<a id="circle16" style="left: 55%; top: 75%;" class="circle-two"></a>
+
+	<a id="circle17" style="left: 65%; top: 23%;" class="circle-two"></a>
+	<a id="circle18" style="left: 92%; top: 35%;" class="circle-two"></a>
+	<a id="circle19" style="left: 85%; top: 70%;;" class="circle-two"></a> -->
+
+	<!-- ***************** 3. validation sequence ***************** -->
+
+	<!-- <a id="circle11" style="left: 18%; top: 20%;" class="circle-three"></a>
+	<a id="circle12" style="left: 6%; top: 45%;" class="circle-three"></a>
+	<a id="circle13" style="left: 12%; bottom: 3%;" class="circle-three"></a>
+
+	<a id="circle14" style="left: 55%; top: 5%;" class="circle-three"></a>
+	<a id="circle15" style="left: 30%; top: 45%;" class="circle-three"></a>
+	<a id="circle16" style="left: 45%; bottom: 4%;" class="circle-three"></a>
+
+	<a id="circle17" style="right: 30%; top: 23%;" class="circle-three"></a>
+	<a id="circle18" style="right: 3%; top: 35%;" class="circle-three"></a>
+	<a id="circle19" style="right: 10%; bottom: 25%;;" class="circle-three"></a> -->
+
+</body>
+<script src="jquery.js"></script>
+<script>
+	$(window).on('load', function() {
+		$("body").removeClass("preload");
+	});
+</script>
+</html>

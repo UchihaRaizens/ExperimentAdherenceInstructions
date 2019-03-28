@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validation sequence screen no.3</title>
+
+</head>
+<style>
+
+.circle-three {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: green;
+}
+
+#circle1{
+  -webkit-animation-name: circleThree; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 64s; /* Safari 4.0 - 8.0 */
+  animation-name: circleThree;
+  animation-duration: 64s; /* 8 x 3 sec + 8 x 5 sec*/
+  animation-delay: 5s;
+}
+
+span{
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: white;
+  z-index: 99;
+  text-align: center;
+  line-height: 25px;
+  top: 2px;
+  left: 2px;
+}
+
+@-webkit-keyframes circleThree {
+  0%   {left: 18%; top: 20%;} /* 1. kalib. bod */
+  3%   {left: 55%; top: 5%;} /* prechod */
+
+  10% {left: 55%; top: 5%;} /* 2. kalib. bod */
+  13% {left: 65%; top: 23%;}
+
+  20% {left: 65%; top: 23%;} /* 3. kalib. bod */
+  23% {left: 6%; top: 45%;}
+  
+  30% {left: 6%; top: 45%;} /* 4. kalib. bod */
+  33% {left: 30%; top: 45%;}
+
+  40% {left: 30%; top: 45%;} /* 5. kalib. bod */
+  43% {left: 92%; top: 35%;}
+
+  50% {left: 92%; top: 35%;} /* 6. kalib. bod */
+  53% {left: 12%; top: 92%;}
+
+  60% {left: 12%; top: 92%;} /* 7. kalib. bod */
+  63% {left: 45%; top: 91%;}
+
+  70% {left: 45%; top: 91%;} /* 8. kalib. bod */
+  73% {left: 85%; top: 70%;}
+
+  100% {left: 85%; top: 70%;} /* 9. kalib. bod */
+}
+
+@keyframes circleThree {
+  0%   {left: 18%; top: 20%;} /* 1. kalib. bod */
+  3%   {left: 55%; top: 5%;} /* prechod */
+
+  10% {left: 55%; top: 5%;} /* 2. kalib. bod */
+  13% {left: 65%; top: 23%;}
+
+  20% {left: 65%; top: 23%;} /* 3. kalib. bod */
+  23% {left: 6%; top: 45%;}
+  
+  30% {left: 6%; top: 45%;} /* 4. kalib. bod */
+  33% {left: 30%; top: 45%;}
+
+  40% {left: 30%; top: 45%;} /* 5. kalib. bod */
+  43% {left: 92%; top: 35%;}
+
+  50% {left: 92%; top: 35%;} /* 6. kalib. bod */
+  53% {left: 12%; top: 92%;}
+
+  60% {left: 12%; top: 92%;} /* 7. kalib. bod */
+  63% {left: 45%; top: 91%;}
+
+  70% {left: 45%; top: 91%;} /* 8. kalib. bod */
+  73% {left: 85%; top: 70%;}
+
+  100% {left: 85%; top: 70%;} /* 9. kalib. bod */
+}
+
+</style>
+
+<body>
+
+  <!-- ***************** 3. validation sequence ***************** -->
+
+  <a id="circle1" style="left: 18%; top: 20%;" class="circle-three"><span>+</span></a>
+
+  
+</body>
+</html>
