@@ -14,6 +14,7 @@ var index = 0;
 
 
 function load() {
+	sendEvent("Start Noun-task");
 	document.getElementById('noun-result').value = "";
 	document.getElementById("noun-example").innerHTML = dataTask1[index];
 	index++;
@@ -21,6 +22,7 @@ function load() {
 
 function answerTask() {
 	var result = document.getElementById('noun-result').value;
+	sendEvent("Odpoveď Noun-task" + index + " : " + result);
 	console.log("Odpoved: " + result);
 	nextNounExample();
 }
@@ -34,6 +36,7 @@ function nextNounExample() {
 }
 
 function end() {
+	sendEvent("End Noun-task");
 	document.getElementById("noun-example").innerHTML = endData;
 	document.getElementById("noun-result").style.visibility = "hidden";
 	document.getElementById("submit-btn").style.visibility = "hidden";

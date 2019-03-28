@@ -9,21 +9,25 @@ function sendEventValue(token, value) {
 		return;
 	}
 	else {
-		$.ajax({
-			type : "POST",
-			url : "http://localhost:55555/api/UXS/SendEvent",
-			crossDomain : true,
-			data : {
-				"Token" : token,
-				"Value" : value,
-				"ValidFrom" : new Date().toISOString()
-			},
-			dataType : 'json',
-			success : function(response) {
-			},
-			error : function(error) {
-			}
-		});
+		var event = {
+        system: SYSTEM_TOKEN,
+        name: 'Lukas',
+        data: value
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:55555/api/event",
+        data: JSON.stringify(event),
+        crossDomain: true,
+        contentType:"application/json; charset=utf-8",
+        success: function () {
+            // event successfully sent
+        },
+        error: function (error) {
+            // failed to send event
+        }
+    });
 	}
 }
 
