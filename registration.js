@@ -1,9 +1,9 @@
 
-var endData = "Stlačte klávesu F12";
+var endData = "Stlačte klávesu F10";
 
 
 function load() {
-	sendEvent("Start Registration-task");
+	sendEvent("START Registration-task");
 }
 
 function registration() {
@@ -12,13 +12,12 @@ function registration() {
 	var email = document.getElementById('email').value;
 	var psw = document.getElementById('psw').value;
 	var repsw = document.getElementById('repsw').value;
-	sendEvent("Odpoveď Registration-task" + " : " + name + "," + email + "," + psw + "," + repsw);
+	sendEvent("ODPOVED Registration-task" + " : " + name + "," + email + "," + psw + "," + repsw);
 	endTask();
 }
 
 function endTask() {
-	sendEvent("End Registration-task");
+	sendEvent("END Registration-task");
 	document.getElementById("end").innerHTML = endData;
 	document.getElementById("content").innerHTML = "";
-
 }

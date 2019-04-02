@@ -1,19 +1,19 @@
-var endData = "Stlačte klávesu F12";
+var endData = "Stlačte klávesu F10";
 
 function load() {
-	sendEvent("Start Psychometric-task");
+	sendEvent("START Psychometric-task");
 }
 
 function answerTask() {
 	var result = document.getElementById('psychometrics-result').value;
-	sendEvent("Odpoveď Psychometric-task" + " : " + result);
+	sendEvent("ODPOVED Psychometric-task" + " : " + result);
 	console.log("Odpoved: " + result);
 	end();
 }
 
 
 function end() {
-	sendEvent("End Psychometric-task");
+	sendEvent("END Psychometric-task");
 	document.getElementById("psychometrics-end").innerHTML = endData;
 	var image_x = document.getElementById('psychometrics-example');
 	image_x.parentNode.removeChild(image_x);

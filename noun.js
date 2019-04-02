@@ -1,20 +1,20 @@
 var dataTask1 = [
-"Prva veta obsahujuce podstatne mena",
-"Druha veta obsahujuce podstatne mena",
-"Tretia veta obsahujuce podstatne mena",
-"Stvrta veta obsahujuce podstatne mena",
-"Piata veta obsahujuce podstatne mena"
+"Satan sa smial, div že sa nepotrhal, a to mu robilo veľmi dobre.",
+"Rodičia obidvoch detí pripevnili zvonka drevenú truhličku, kde si pestovali potrebnejšiu kuchynskú zeleninu.",
+"Číta.",
+"O dva-tri roky, keď som už bol väčší, zaujímaly ma viac rozhovory starých, ako reči drotárika.",
+"V dolinkách pod kopcom ešte ticho stekal čierny ľad, džurdžaly potôčiky."
 ];
 
 
-var endData = "Stlačte klávesu F12";
+var endData = "Stlačte klávesu F10;"
 
 var MAX = 4;
 var index = 0;
 
 
 function load() {
-	sendEvent("Start Noun-task");
+	sendEvent("START Noun-task");
 	document.getElementById('noun-result').value = "";
 	document.getElementById("noun-example").innerHTML = dataTask1[index];
 	index++;
@@ -22,8 +22,8 @@ function load() {
 
 function answerTask() {
 	var result = document.getElementById('noun-result').value;
-	sendEvent("Odpoveď Noun-task" + index + " : " + result);
-	console.log("Odpoved: " + result);
+	sendEvent("ODPPOVED Noun-task_" + index + " : " + result);
+	console.log("ODPOVED: " + result);
 	nextNounExample();
 }
 
@@ -36,7 +36,7 @@ function nextNounExample() {
 }
 
 function end() {
-	sendEvent("End Noun-task");
+	sendEvent("END Noun-task");
 	document.getElementById("noun-example").innerHTML = endData;
 	document.getElementById("noun-result").style.visibility = "hidden";
 	document.getElementById("submit-btn").style.visibility = "hidden";

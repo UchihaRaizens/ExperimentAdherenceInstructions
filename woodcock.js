@@ -1,16 +1,18 @@
 var dataTask1 = [
-	"1 2 3 4 5 6 ?",
-	"9 7 5 3 1 ?",
-	"1 3 7 9 11 58 ?"
+	"3  6  9  12  15  ?",
+	"3  4  7  8  11  12  ?",
+	"32  16  8  4  2  ?",
+	"27  24  ?  18  15  12",
+	"0  1  1  2  3  5  ?"
 ];
 
-var endData = "Stlačte klávesu F12";
+var endData = "Stlačte klávesu F10";
 
-var MAX = 2;
+var MAX = 4;
 var index = 0; 
 
 function load() {
-	sendEvent("Start Woodstock-task");
+	sendEvent("START Woodstock-task");
 	document.getElementById('woodcock-result').value = "";
 	document.getElementById("woodcock-example").innerHTML = dataTask1[index];
 	index++;
@@ -18,7 +20,7 @@ function load() {
 
 function answerTask() {
 	var result = document.getElementById('woodcock-result').value;
-	sendEvent("Odpoveď Woodstock-task" + index + " : " + result);
+	sendEvent("ODPOVED Woodstock-task_" + index + " : " + result);
 	console.log("Odpoved: " + result);
 	nextWoodcockExample();
 }
@@ -32,7 +34,7 @@ function nextWoodcockExample() {
 }
 
 function end() {	
-	sendEvent("End Woodstock-task");
+	sendEvent("END Woodstock-task");
 	document.getElementById("woodcock-example").innerHTML = endData;
 	document.getElementById("woodcock-result").style.visibility = "hidden";
 	document.getElementById("submit-btn").style.visibility = "hidden";
