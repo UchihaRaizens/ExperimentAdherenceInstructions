@@ -1,9 +1,9 @@
 var dataTask1 = [
-	"3  6  9  12  15  ?",
-	"3  4  7  8  11  12  ?",
-	"32  16  8  4  2  ?",
-	"27  24  ?  18  15  12",
-	"0  1  1  2  3  5  ?"
+	"3  &nbsp;6 &nbsp;9  &nbsp;12  &nbsp;15  &nbsp;?",
+	"3  &nbsp;4  &nbsp;7  &nbsp;8  &nbsp;11  &nbsp;12  &nbsp;?",
+	"32  &nbsp;16  &nbsp;8  &nbsp;4  &nbsp;2  &nbsp;?",
+	"27  &nbsp;24  &nbsp;?  &nbsp;18  &nbsp;15  &nbsp;12",
+	"0 &nbsp;1 &nbsp;1 &nbsp;2 &nbsp;3 &nbsp;5 &nbsp;?"
 ];
 
 var endData = "Stlačte klávesu F10";
@@ -12,7 +12,9 @@ var MAX = 4;
 var index = 0; 
 
 function load() {
-	sendEvent("START Woodstock-task");
+	if(index == 0) {
+		sendEvent("START Woodstock-task");
+	}
 	document.getElementById('woodcock-result').value = "";
 	document.getElementById("woodcock-example").innerHTML = dataTask1[index];
 	index++;

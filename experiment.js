@@ -10,7 +10,9 @@ var MAX = 4;
 var index = 0;
 
 function load() {
-	sendEvent("START Math-task");
+	if(index == 0) {
+		sendEvent("START Math-task");
+	}
 	document.getElementById('math-result').value = "";
 	document.getElementById("math-example").innerHTML = dataTask1[index];
 	index++;

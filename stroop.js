@@ -18,7 +18,9 @@ var MAX = 4;
 var index = 0;
 
 function load() {
-	sendEvent("START Stroop-task");
+	if(index == 0) {
+		sendEvent("START Stroop-task");
+	}
 	document.getElementById('stroop-result').value = "";
 	document.getElementById("stroop-example").innerHTML = dataTask1[index];
 	document.getElementById("stroop-example").style.color = dataTaskColor[index];

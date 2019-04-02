@@ -1,7 +1,9 @@
 var endData = "Stlačte klávesu F10";
 
 function load() {
-	sendEvent("START Psychometric-task");
+	if(index == 0) {
+		sendEvent("START Psychometric-task");
+	}
 }
 
 function answerTask() {

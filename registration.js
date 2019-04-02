@@ -3,7 +3,9 @@ var endData = "Stlačte klávesu F10";
 
 
 function load() {
-	sendEvent("START Registration-task");
+	if(index == 0) {
+		sendEvent("START Registration-task");
+	}
 }
 
 function registration() {

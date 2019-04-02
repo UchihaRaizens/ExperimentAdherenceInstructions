@@ -14,7 +14,9 @@ var index = 0;
 
 
 function load() {
-	sendEvent("START Noun-task");
+	if(index == 0) {
+		sendEvent("START Noun-task");
+	}
 	document.getElementById('noun-result').value = "";
 	document.getElementById("noun-example").innerHTML = dataTask1[index];
 	index++;

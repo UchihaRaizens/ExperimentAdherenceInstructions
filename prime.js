@@ -14,7 +14,9 @@ var index = 0;
 
 
 function load() {
-	sendEvent("START Prime-task");
+	if(index == 0) {
+		sendEvent("START Prime-task");
+	}
 	document.getElementById('prime-result').value = "";
 	document.getElementById("prime-example").innerHTML = dataTask1[index];
 	index++;
